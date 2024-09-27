@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa S2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hearth">
+        <span class="text">Clique aqui</span>
+    </div>
+
+    <div class="card">
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <img src="imagem1.png" alt="Imagem 1" class="card-img">
+                <p class="card-text">Feliz 4 anos minha gatinha! Muito obrigado por todo esse tempo que você passou comigo, eu sou muito feliz por ter você na minha vida, e espero que você sinta o mesmo meu anjinho.</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="imagem2.png" alt="Imagem 2" class="card-img">
+                <p class="card-text">Eu sou muito sortudo por ter encontrado você, e continuo sendo todo dia que posso ter você do meu ladinho. Você é a primeira e única pessoa que consegue tocar meu coraçãozinho dessa forma</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="imagem3.png" alt="Imagem 3" class="card-img">
+                <p class="card-text">Não vejo a hora de poder ficar com você todo dia, e poder compartilhar tudo que faço com você, você é a coisa mais especial da minha vida, e pretendo ficar muito mais com você meu bebezinho</p>
+            </div>
+        </div>
+        <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
+    </div>
+    
+
+    <script>
+        document.querySelector('.hearth').addEventListener('click', function() {
+            this.classList.toggle('clicked');
+            const text = this.querySelector('.text');
+            text.classList.toggle('fade-out');
+
+            const card = document.querySelector('.card');
+            card.classList.toggle('show-card');
+
+            if (card.classList.contains('show-card')) {
+                document.body.classList.add('padding-bottom');
+            } else {
+                document.body.classList.remove('padding-bottom');
+            }
+        });
+
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Inicializa o primeiro slide
+        showSlide(currentSlide);
+    </script>    
+</body>
+</html>
