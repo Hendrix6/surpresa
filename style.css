@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #1a1a1a;
+    
+}
+
+.hearth{
+    width: 150px;
+    height: 240px;
+
+    position: relative;
+    background-color: #E93D3D;
+    transform-origin: right bottom;
+    border-radius: 22.5px;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hearth.clicked {
+    transform: rotate(45deg) translateX(-100px); /* Aumentei o valor para mover mais para a esquerda */
+    transition: transform 0.5s ease;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+}
+
+.hearth:after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform-origin: left bottom;
+    border-radius: 22.5px;
+    background-color: #D62424;
+    position: absolute;
+    transition: .5s ease;
+}
+
+.hearth.clicked:after{
+    transform: rotate(-90deg) translateY(150px);
+    transition: .5s ease;
+    border-top-left-radius: 75px;
+    border-top-right-radius: 75px;
+}
+
+.text {
+    font-family: "Figtree", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.5s ease;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+body.padding-bottom {
+    padding-bottom: 100px; /* Ajuste este valor conforme necessário */
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    position: absolute;
+    top: 350px; /* Ajuste este valor conforme necessário */
+    
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+    text-align: center;
+}
+
+.card.show-card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Ativa flexbox para o carrossel */
+    flex-direction: column; /* Coloca os itens em coluna */
+}
+
+.carousel-slide {
+    display: none; /* Esconde slides não ativos */
+    flex-direction: column; /* Itens empilhados verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+.carousel-slide.active {
+    display: flex; /* Apenas o slide ativo é exibido */
+}
+
+.card-img {
+    width: 100%; /* A imagem ocupa 100% da largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Borda arredondada, se desejado */
+}
+
+.card-text {
+    font-family: "Figtree", sans-serif;
+    margin-top: 10px; /* Espaço entre a imagem e o texto */
+    color: #333; /* Cor do texto */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%; /* Mantém as setas centralizadas verticalmente */
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #E93D3D;
+}
+
+.carousel-button.left {
+    left: 2px; /* Aumente este valor para afastar mais a seta esquerda */
+}
+
+.carousel-button.right {
+    right: 2px; /* Aumente este valor para afastar mais a seta direita */
+}
