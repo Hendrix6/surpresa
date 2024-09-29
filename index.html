@@ -10,10 +10,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="hearth">
-        <span class="text">Clique aqui</span>
-    </div>
 
+    <div class="container">
+        <img src="corasao.png" alt="Imagem Esquerda" class="img-left">
+
+        <div class="hearth">
+            <span class="text">Clique aqui</span>
+        </div>
+
+        <img src="corasao2.png" alt="Imagem Direita" class="img-right">
+    </div>
+    
     <div class="card">
         <div class="carousel">
             <div class="carousel-slide active">
@@ -36,7 +43,6 @@
         <button class="carousel-button left" onclick="prevSlide()">&#10094;</button>
         <button class="carousel-button right" onclick="nextSlide()">&#10095;</button>
     </div>
-    
 
     <script>
         document.querySelector('.hearth').addEventListener('click', function() {
@@ -47,11 +53,17 @@
             const card = document.querySelector('.card');
             card.classList.toggle('show-card');
 
+            const imagesLeft = document.querySelector('.img-left');
+            const imagesRight = document.querySelector('.img-right');
+
             if (card.classList.contains('show-card')) {
                 document.body.classList.add('padding-bottom');
             } else {
                 document.body.classList.remove('padding-bottom');
             }
+
+            imagesLeft.classList.toggle('show-img');
+            imagesRight.classList.toggle('show-img');
         });
 
         let currentSlide = 0;

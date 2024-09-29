@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.img-left, .img-right {
+    width: 400px;  
+    height: 700px;
+    margin: 0 200px; 
+    opacity: 0;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.img-left.show-img{
+    opacity: 1;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.img-right.show-img{
+    opacity: 1;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
 body{
     width: 100%;
     height: 100vh;
