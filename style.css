@@ -170,11 +170,11 @@ body.padding-bottom {
 }
 
 @media (max-width: 1000px) {
-    .img-left.show-img{
+    .img-left, .img-right {
+        width: 100px;  
+        height: 175px;
+        margin: 0 60px; 
         opacity: 0;
-    }
-    
-    .img-right.show-img{
-        opacity: 0;
+        transition: opacity 2s ease, transform 2s ease;
     }
 }
