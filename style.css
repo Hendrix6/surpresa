@@ -168,3 +168,13 @@ body.padding-bottom {
 .carousel-button.right {
     right: 2px; 
 }
+
+@media (max-width: 1000px) {
+    .img-left.show-img{
+        opacity: 0;
+    }
+    
+    .img-right.show-img{
+        opacity: 0;
+    }
+}
