@@ -178,3 +178,101 @@ body.padding-bottom {
         transition: opacity 2s ease, transform 2s ease;
     }
 }
+
+.tristeza{
+    font-family: "Figtree", sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: #E93D3D;
+    padding: 0.5%;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.tristeza.show-msg{
+    opacity: 0.2;
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.trist-pai{
+    justify-content: center;
+    text-align: center;
+}
+
+.botao-trist{
+    text-decoration: none;
+}
+
+.card_2 {
+    font-family: "Figtree", sans-serif;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+    text-align: center;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 45%;
+    margin-right: 750px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.bot-dir {
+    width: 40px;
+    height: 40px;
+    margin-left: 0;
+}
+
+.carrossel {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrossel-slide {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-slide.active {
+    display: flex;
+}
+
+.carrossel-slide:last-child img {
+    width: 100%; /* A imagem ocupará 100% da largura do card */
+    height: auto; /* A altura será ajustada automaticamente */
+    border-radius: 8px;
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+.carrossel-slide:last-child p {
+    margin-bottom: 10px;
+    font-family: "Figtree", sans-serif;
+}
+
+.campo{
+    font-family: "Figtree", sans-serif;
+    margin-top: 100px;
+    background-color: #D62424;
+    padding: 5px;
+    border-radius: 10px;
+    opacity: 0.1;
+}
+
+.campo a{
+    text-decoration: none;
+}

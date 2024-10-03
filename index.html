@@ -10,7 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <div class="trist-pai"> 
+        <a class="botao-trist" href="botao.html" target="_blank">
+            <div class="tristeza"> 
+                <h2>clique aqui quando estiver triste</h2>
+            </div>
+        </a>
+    </div>
+    
     <div class="container">
         <img src="corasao.png" alt="Imagem Esquerda" class="img-left">
 
@@ -56,6 +63,8 @@
             const imagesLeft = document.querySelector('.img-left');
             const imagesRight = document.querySelector('.img-right');
 
+            const msg_top = document.querySelector('.tristeza');
+
             if (card.classList.contains('show-card')) {
                 document.body.classList.add('padding-bottom');
             } else {
@@ -64,6 +73,8 @@
 
             imagesLeft.classList.toggle('show-img');
             imagesRight.classList.toggle('show-img');
+
+            msg_top.classList.toggle('show-msg');
         });
 
         let currentSlide = 0;

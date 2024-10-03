@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="card_2">
+        <div class="carrossel">
+            <div class="carrossel-slide active">
+                <p>Oi minha gatinha linda, se você clicou aqui é porque está triste (ou provavelmente porque eu mandei).</p><br>
+                <p>Independente de como você tenha chego aqui, quero que você saiba que, eu não sou o mesmo sem você.</p>
+                <p>Eu realmente não consigo viver sem você comigo, e eu juro que isso não é exagero.</p><br>
+                <p>Sei que você está triste comigo agora, e provavelmente fez aquilo que eu odeio: me bloqueou e não está falando comigo.</p>
+            </div>
+            <div class="carrossel-slide">
+                <p>E é justamente por isso que eu estou escrevendo isso agora mocinha, eu gostaria que você soubesse o porquê eu não gosto disso.</p>
+            </div>
+            <div class="carrossel-slide">
+                <p>O motivo é mais simples do que parece, como eu falei anteriormente, eu não consigo viver sem você.</p><br>
+                <p>Então um dia onde eu não tenho você, onde eu não falo com você, é um dia que não vale a pena.</p><br>
+                <p>Não importa o quão bom ou ruim ele tenha sido, sem você para eu poder compartilhar, tudo fica inválido.</p>
+            </div>
+            <div class="carrossel-slide">
+               <p>O meu dia fica feio e sem graça quando eu não tenho você para poder mandar mensagem, mandar alguma imagem engraçada que eu achei, reclamar das coisas.</p><br>
+               <p>Você é parte integral da minha vida, você me completa e me motiva para tudo que eu faço.</p><br>
+               <p>Todas as decisões importantes da minha vida tem você inclusa, nem que seja só para a gente poder ter mais um tempinho juntos em alguma coisa.</p>
+            </div>
+            <div class="carrossel-slide">
+               <p>Por isso é muito importante para mim que você aceite fazer parte da minha vida.</p><br>
+               <p>Que você esteja lá para os momentos bons e para os ruins também, que mesmo brava ou triste, ainda esteja lá por mim.</p><br>
+               <p>E eu sei que essa não é uma tarefa fácil, eu também não sou merecedor de muitas coisas. Mas sei que a gente pode e deve se ajudar, mesmo quando o outro não está merecendo.</p><br>
+               <p>Então eu gostaria que você aceitasse fazer parte da minha vida, se afastar não é só me punir, mas é também, em partes, negar isso.</p>
+            </div>
+            <div class="carrossel-slide">
+               <p>Eu sei que isso pode parecer dramático, e é um pouco mesmo, mas é algo importante para mim, porém, sei que preciso fazer por merecer.</p><br>
+               <p>Então, assim como eu estou agora trabalhando aqui nesse site, eu também estou trabalhando para consertar tudo aquilo que eu fico devendo, tudo aquilo que faz você querer se afastar.</p><br>
+               <p>Espero que você entenda o que eu quis dizer, e que possa também fazer os seus trabalhinhos, para que o nosso futuro seja bem construído e estável.</p>
+            </div>
+            <div class="carrossel-slide">
+               <p>Obrigado por ler tudo meu amorzinho, é importante para mim, e também para você, eu amo muito você meu bebê.</p>
+                <img src="picro.png">
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-button right" onclick="nextSlide()">
+        <img class="bot-dir" src="botao_direita.png" alt="">
+    </button>
+
+    <div class="campo">
+        <a href="https://campo-minado.com/" target="_blank">
+            <h2>istereg</h2>
+        </a>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carrossel-slide');
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.carrossel-slide');
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        // Inicializa o primeiro slide
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
