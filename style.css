@@ -219,7 +219,18 @@ body.padding-bottom {
 .carousel-button {
     position: absolute;
     top: 45%;
-    margin-right: 750px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+
+}
+
+.carrossel-button {
+    position: absolute;
+    top: 45%;
+    margin-right: -360px;
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
