@@ -188,6 +188,9 @@ body.padding-bottom {
         opacity: 0;
         transition: opacity 2s ease, transform 2s ease;
     }
+    .trist-pai{
+        margin-bottom: 100px;
+    }
 }
 
 .tristeza{
